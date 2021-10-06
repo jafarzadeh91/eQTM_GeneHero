@@ -1,0 +1,481 @@
+[ 2017-11-15 12:41:37 ] INFO number of available cores: 8 
+[ 2017-11-15 12:41:38 ] INFO number of assigned cores: 8 
+[ 2017-11-15 12:41:38 ] INFO Running has been started.... 
+[ 2017-11-15 12:43:15 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 1000 
+[ 2017-11-15 12:43:15 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 4000 
+[ 2017-11-15 12:43:15 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 500 
+[ 2017-11-15 12:43:15 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 2000 
+[ 2017-11-15 12:43:15 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 2000 
+[ 2017-11-15 12:43:15 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 500 
+[ 2017-11-15 12:43:15 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 4000 
+[ 2017-11-15 12:43:15 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 1000 
+[ 2017-11-15 14:05:27 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 500 
+[ 2017-11-15 14:05:27 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 1000 
+[ 2017-11-15 14:40:43 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 2000 
+[ 2017-11-15 14:40:46 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 4000 
+[ 2017-11-15 15:24:17 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 500 
+[ 2017-11-15 15:25:11 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 1000 
+[ 2017-11-15 15:29:15 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 2000 
+[ 2017-11-15 16:01:03 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 4000 
+[ 2017-11-17 10:48:32 ] INFO number of available cores: 8 
+[ 2017-11-17 10:48:33 ] INFO number of assigned cores: 8 
+[ 2017-11-17 10:48:33 ] INFO Running has been started.... 
+[ 2017-11-17 10:50:11 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 4000 
+[ 2017-11-17 12:52:44 ] INFO Running has been finished. Reporting is starting... 
+[ 2017-11-17 12:52:44 ] INFO Reporting has been finished. Ploting is starting... 
+[ 2017-11-17 12:52:44 ] INFO Done. 
+[ 2017-11-19 14:22:02 ] INFO number of available cores: 8 
+[ 2017-11-19 14:22:05 ] INFO number of assigned cores: 8 
+[ 2017-11-19 14:22:05 ] INFO Running has been started.... 
+[ 2017-11-19 14:23:58 ] INFO Running has been finished. Reporting is starting... 
+[ 2017-11-19 14:23:58 ] INFO reporting for:train 
+[ 2017-11-19 14:23:58 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 500 
+[ 2017-11-19 14:25:12 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 1000 
+[ 2017-11-19 14:26:21 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 2000 
+[ 2017-11-19 14:27:35 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 4000 
+[ 2017-11-19 14:28:47 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 500 
+[ 2017-11-19 14:29:55 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 1000 
+[ 2017-11-19 14:31:04 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 2000 
+[ 2017-11-19 14:32:30 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 4000 
+[ 2017-11-19 14:33:39 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 500 
+[ 2017-11-19 14:34:41 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 1000 
+[ 2017-11-19 14:35:44 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 2000 
+[ 2017-11-19 14:36:50 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 4000 
+[ 2017-11-19 14:38:42 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 500 
+[ 2017-11-19 14:40:05 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 1000 
+[ 2017-11-19 14:41:30 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 2000 
+[ 2017-11-19 14:42:57 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 4000 
+[ 2017-11-19 14:44:06 ] INFO reporting for:test 
+[ 2017-11-19 14:44:06 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 500 
+[ 2017-11-19 14:44:20 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 1000 
+[ 2017-11-19 14:44:33 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 2000 
+[ 2017-11-19 14:44:47 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 4000 
+[ 2017-11-19 14:45:02 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 500 
+[ 2017-11-19 14:45:17 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 1000 
+[ 2017-11-19 14:45:31 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 2000 
+[ 2017-11-19 14:45:45 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 4000 
+[ 2017-11-19 14:46:01 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 500 
+[ 2017-11-19 14:46:15 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 1000 
+[ 2017-11-19 14:46:26 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 2000 
+[ 2017-11-19 14:46:36 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 4000 
+[ 2017-11-19 14:46:47 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 500 
+[ 2017-11-19 14:46:54 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 1000 
+[ 2017-11-19 14:47:02 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 2000 
+[ 2017-11-19 14:47:10 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 4000 
+[ 2017-11-19 14:47:18 ] INFO Reporting has been finished. Ploting is starting... 
+[ 2017-11-19 14:47:50 ] INFO Done. 
+[ 2017-11-19 17:23:26 ] INFO number of available cores: 8 
+[ 2017-11-19 17:23:28 ] INFO number of assigned cores: 8 
+[ 2017-11-19 17:23:28 ] INFO Running has been started.... 
+[ 2017-11-19 17:25:09 ] INFO Running has been finished. Reporting is starting... 
+[ 2017-11-19 17:25:09 ] INFO reporting for:train 
+[ 2017-11-19 17:25:09 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 500 
+[ 2017-11-19 17:26:25 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 1000 
+[ 2017-11-19 17:27:29 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 2000 
+[ 2017-11-19 17:28:32 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 4000 
+[ 2017-11-19 17:29:40 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 500 
+[ 2017-11-19 17:30:44 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 1000 
+[ 2017-11-19 17:31:48 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 2000 
+[ 2017-11-19 17:32:53 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 4000 
+[ 2017-11-19 17:33:57 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 500 
+[ 2017-11-19 17:34:57 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 1000 
+[ 2017-11-19 17:35:56 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 2000 
+[ 2017-11-19 17:36:56 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 4000 
+[ 2017-11-19 17:37:59 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 500 
+[ 2017-11-19 17:38:44 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 1000 
+[ 2017-11-19 17:39:25 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 2000 
+[ 2017-11-19 17:40:05 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 4000 
+[ 2017-11-19 17:40:43 ] INFO reporting for:test 
+[ 2017-11-19 17:40:43 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 500 
+[ 2017-11-19 17:40:51 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 1000 
+[ 2017-11-19 17:40:59 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 2000 
+[ 2017-11-19 17:41:07 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 4000 
+[ 2017-11-19 17:41:15 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 500 
+[ 2017-11-19 17:41:23 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 1000 
+[ 2017-11-19 17:41:30 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 2000 
+[ 2017-11-19 17:41:38 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 4000 
+[ 2017-11-19 17:41:45 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 500 
+[ 2017-11-19 17:41:52 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 1000 
+[ 2017-11-19 17:42:00 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 2000 
+[ 2017-11-19 17:42:07 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 4000 
+[ 2017-11-19 17:42:14 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 500 
+[ 2017-11-19 17:42:18 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 1000 
+[ 2017-11-19 17:42:23 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 2000 
+[ 2017-11-19 17:42:27 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 4000 
+[ 2017-11-19 17:42:31 ] INFO Reporting has been finished. Ploting is starting... 
+[ 2017-11-19 17:42:46 ] INFO Done. 
+[ 2017-11-19 17:57:34 ] INFO number of available cores: 8 
+[ 2017-11-19 17:57:36 ] INFO number of assigned cores: 8 
+[ 2017-11-19 17:57:36 ] INFO Running has been started.... 
+[ 2017-11-19 17:59:10 ] INFO number of available cores: 8 
+[ 2017-11-19 17:59:11 ] INFO number of assigned cores: 8 
+[ 2017-11-19 17:59:11 ] INFO Running has been started.... 
+[ 2017-11-19 18:00:42 ] INFO Running has been finished. Reporting is starting... 
+[ 2017-11-19 18:00:42 ] INFO reporting for:train 
+[ 2017-11-19 18:00:42 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 500 
+[ 2017-11-19 18:13:11 ] INFO number of available cores: 8 
+[ 2017-11-19 18:13:13 ] INFO number of assigned cores: 8 
+[ 2017-11-19 18:13:13 ] INFO Running has been started.... 
+[ 2017-11-19 18:13:52 ] INFO number of available cores: 8 
+[ 2017-11-19 18:13:53 ] INFO number of assigned cores: 8 
+[ 2017-11-19 18:13:53 ] INFO Running has been started.... 
+[ 2017-11-19 18:15:18 ] INFO Running has been finished. Reporting is starting... 
+[ 2017-11-19 18:15:18 ] INFO reporting for:train 
+[ 2017-11-19 18:15:18 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 500 
+[ 2017-11-19 18:16:23 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 1000 
+[ 2017-11-19 18:17:35 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 2000 
+[ 2017-11-19 18:18:39 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 4000 
+[ 2017-11-19 18:19:56 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 500 
+[ 2017-11-19 18:21:02 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 1000 
+[ 2017-11-19 18:22:08 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 2000 
+[ 2017-11-19 18:23:09 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 4000 
+[ 2017-11-19 18:24:11 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 500 
+[ 2017-11-19 18:25:11 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 1000 
+[ 2017-11-19 18:26:11 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 2000 
+[ 2017-11-19 18:27:15 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 4000 
+[ 2017-11-19 18:28:15 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 500 
+[ 2017-11-19 18:29:00 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 1000 
+[ 2017-11-19 18:29:44 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 2000 
+[ 2017-11-19 18:30:27 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 4000 
+[ 2017-11-19 18:31:08 ] INFO reporting for:test 
+[ 2017-11-19 18:31:08 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 500 
+[ 2017-11-19 18:31:16 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 1000 
+[ 2017-11-19 18:31:23 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 2000 
+[ 2017-11-19 18:31:31 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 4000 
+[ 2017-11-19 18:31:39 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 500 
+[ 2017-11-19 18:31:46 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 1000 
+[ 2017-11-19 18:31:54 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 2000 
+[ 2017-11-19 18:32:01 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 4000 
+[ 2017-11-19 18:32:08 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 500 
+[ 2017-11-19 18:32:15 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 1000 
+[ 2017-11-19 18:32:22 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 2000 
+[ 2017-11-19 18:32:29 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 4000 
+[ 2017-11-19 18:32:36 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 500 
+[ 2017-11-19 18:32:41 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 1000 
+[ 2017-11-19 18:32:46 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 2000 
+[ 2017-11-19 18:32:51 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 4000 
+[ 2017-11-19 18:32:55 ] INFO Reporting has been finished. Ploting is starting... 
+[ 2017-11-19 18:35:43 ] INFO number of available cores: 8 
+[ 2017-11-19 18:35:44 ] INFO number of assigned cores: 8 
+[ 2017-11-19 18:35:44 ] INFO Running has been started.... 
+[ 2017-11-19 18:37:12 ] INFO Running has been finished. Reporting is starting... 
+[ 2017-11-19 18:37:12 ] INFO reporting for:train 
+[ 2017-11-19 18:37:12 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 500 
+[ 2017-11-19 18:38:17 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 1000 
+[ 2017-11-19 18:39:23 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 2000 
+[ 2017-11-19 18:40:31 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 4000 
+[ 2017-11-19 18:41:40 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 500 
+[ 2017-11-19 18:42:47 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 1000 
+[ 2017-11-19 18:43:50 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 2000 
+[ 2017-11-19 18:44:51 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 4000 
+[ 2017-11-19 18:45:53 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 500 
+[ 2017-11-19 18:46:51 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 1000 
+[ 2017-11-19 18:47:51 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 2000 
+[ 2017-11-19 18:48:48 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 4000 
+[ 2017-11-19 18:49:47 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 500 
+[ 2017-11-19 18:50:33 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 1000 
+[ 2017-11-19 18:51:18 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 2000 
+[ 2017-11-19 18:52:00 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 4000 
+[ 2017-11-19 18:52:39 ] INFO reporting for:test 
+[ 2017-11-19 18:52:39 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 500 
+[ 2017-11-19 18:52:47 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 1000 
+[ 2017-11-19 18:52:56 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 2000 
+[ 2017-11-19 18:53:04 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 4000 
+[ 2017-11-19 18:53:11 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 500 
+[ 2017-11-19 18:53:18 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 1000 
+[ 2017-11-19 18:53:25 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 2000 
+[ 2017-11-19 18:53:33 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 4000 
+[ 2017-11-19 18:53:41 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 500 
+[ 2017-11-19 18:53:48 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 1000 
+[ 2017-11-19 18:53:57 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 2000 
+[ 2017-11-19 18:54:04 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 4000 
+[ 2017-11-19 18:54:11 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 500 
+[ 2017-11-19 18:54:17 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 1000 
+[ 2017-11-19 18:54:22 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 2000 
+[ 2017-11-19 18:54:27 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 4000 
+[ 2017-11-19 18:54:32 ] INFO Reporting has been finished. Ploting is starting... 
+[ 2017-11-19 19:00:09 ] INFO number of available cores: 8 
+[ 2017-11-19 19:00:10 ] INFO number of assigned cores: 8 
+[ 2017-11-19 19:00:10 ] INFO Running has been started.... 
+[ 2017-11-19 19:00:10 ] INFO Running has been finished. Reporting is starting... 
+[ 2017-11-19 19:00:10 ] INFO Reporting has been finished. Ploting is starting... 
+[ 2017-11-19 19:00:36 ] INFO Done. 
+[ 2017-11-19 19:14:20 ] INFO number of available cores: 8 
+[ 2017-11-19 19:14:22 ] INFO number of assigned cores: 8 
+[ 2017-11-19 19:14:22 ] INFO Running has been started.... 
+[ 2017-11-19 19:14:22 ] INFO Running has been finished. Reporting is starting... 
+[ 2017-11-19 19:14:22 ] INFO Reporting has been finished. Ploting is starting... 
+[ 2017-11-19 19:19:29 ] INFO number of available cores: 8 
+[ 2017-11-19 19:19:30 ] INFO number of assigned cores: 8 
+[ 2017-11-19 19:19:30 ] INFO Running has been started.... 
+[ 2017-11-19 19:21:15 ] INFO Running has been finished. Reporting is starting... 
+[ 2017-11-19 19:21:15 ] INFO reporting for:train 
+[ 2017-11-19 19:21:15 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 500 
+[ 2017-11-19 19:22:25 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 1000 
+[ 2017-11-19 19:23:27 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 2000 
+[ 2017-11-19 19:24:36 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 4000 
+[ 2017-11-19 19:25:38 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 500 
+[ 2017-11-19 19:26:41 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 1000 
+[ 2017-11-19 19:27:45 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 2000 
+[ 2017-11-19 19:28:50 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 4000 
+[ 2017-11-19 19:29:51 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 500 
+[ 2017-11-19 19:30:51 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 1000 
+[ 2017-11-19 19:31:50 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 2000 
+[ 2017-11-19 19:32:47 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 4000 
+[ 2017-11-19 19:33:47 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 500 
+[ 2017-11-19 19:34:32 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 1000 
+[ 2017-11-19 19:35:15 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 2000 
+[ 2017-11-19 19:35:56 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 4000 
+[ 2017-11-19 19:36:35 ] INFO reporting for:test 
+[ 2017-11-19 19:36:35 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 500 
+[ 2017-11-19 19:36:43 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 1000 
+[ 2017-11-19 19:36:50 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 2000 
+[ 2017-11-19 19:36:58 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 4000 
+[ 2017-11-19 19:37:05 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 500 
+[ 2017-11-19 19:37:12 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 1000 
+[ 2017-11-19 19:37:19 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 2000 
+[ 2017-11-19 19:37:26 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 4000 
+[ 2017-11-19 19:37:34 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 500 
+[ 2017-11-19 19:37:41 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 1000 
+[ 2017-11-19 19:37:47 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 2000 
+[ 2017-11-19 19:37:54 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 4000 
+[ 2017-11-19 19:38:01 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 500 
+[ 2017-11-19 19:38:06 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 1000 
+[ 2017-11-19 19:38:11 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 2000 
+[ 2017-11-19 19:38:15 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 4000 
+[ 2017-11-19 19:38:20 ] INFO Reporting has been finished. Ploting is starting... 
+[ 2017-11-19 19:38:45 ] INFO Done. 
+[ 2017-11-19 19:50:24 ] INFO number of available cores: 8 
+[ 2017-11-19 19:50:25 ] INFO number of assigned cores: 8 
+[ 2017-11-19 19:50:25 ] INFO Running has been started.... 
+[ 2017-11-19 19:52:07 ] INFO Running has been finished. Reporting is starting... 
+[ 2017-11-19 19:52:07 ] INFO reporting for:train 
+[ 2017-11-19 19:52:07 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 500 
+[ 2017-11-19 19:55:20 ] INFO number of available cores: 8 
+[ 2017-11-19 19:55:21 ] INFO number of assigned cores: 8 
+[ 2017-11-19 19:55:21 ] INFO Running has been started.... 
+[ 2017-11-19 19:57:08 ] INFO Running has been finished. Reporting is starting... 
+[ 2017-11-19 19:57:08 ] INFO reporting for:train 
+[ 2017-11-19 19:57:08 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 500 
+[ 2017-11-19 20:11:00 ] INFO number of available cores: 8 
+[ 2017-11-19 20:11:01 ] INFO number of assigned cores: 8 
+[ 2017-11-19 20:11:01 ] INFO Running has been started.... 
+[ 2017-11-19 20:12:21 ] INFO Running has been finished. Reporting is starting... 
+[ 2017-11-19 20:12:21 ] INFO reporting for:train 
+[ 2017-11-19 20:12:22 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 500 
+[ 2017-11-19 20:17:39 ] INFO number of available cores: 8 
+[ 2017-11-19 20:17:41 ] INFO number of assigned cores: 8 
+[ 2017-11-19 20:17:41 ] INFO Running has been started.... 
+[ 2017-11-19 20:19:15 ] INFO Running has been finished. Reporting is starting... 
+[ 2017-11-19 20:19:15 ] INFO reporting for:train 
+[ 2017-11-19 20:19:15 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 500 
+[ 2017-11-19 20:20:23 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 1000 
+[ 2017-11-19 20:21:30 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 2000 
+[ 2017-11-19 20:22:39 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 4000 
+[ 2017-11-19 20:23:41 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 500 
+[ 2017-11-19 20:24:46 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 1000 
+[ 2017-11-19 20:25:53 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 2000 
+[ 2017-11-19 20:26:59 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 4000 
+[ 2017-11-19 20:28:02 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 500 
+[ 2017-11-19 20:29:04 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 1000 
+[ 2017-11-19 20:30:06 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 2000 
+[ 2017-11-19 20:31:06 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 4000 
+[ 2017-11-19 20:32:08 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 500 
+[ 2017-11-19 20:32:54 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 1000 
+[ 2017-11-19 20:33:39 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 2000 
+[ 2017-11-19 20:34:21 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 4000 
+[ 2017-11-19 20:43:36 ] INFO number of available cores: 8 
+[ 2017-11-19 20:43:37 ] INFO number of assigned cores: 8 
+[ 2017-11-19 20:43:37 ] INFO Running has been started.... 
+[ 2017-11-19 20:45:06 ] INFO Running has been finished. Reporting is starting... 
+[ 2017-11-19 20:45:06 ] INFO reporting for:train 
+[ 2017-11-19 20:45:06 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 500 
+[ 2017-11-19 20:46:13 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 1000 
+[ 2017-11-19 20:47:20 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 2000 
+[ 2017-11-19 20:48:24 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 4000 
+[ 2017-11-19 20:49:30 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 500 
+[ 2017-11-19 20:50:39 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 1000 
+[ 2017-11-19 20:51:45 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 2000 
+[ 2017-11-19 20:52:53 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 4000 
+[ 2017-11-19 20:54:00 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 500 
+[ 2017-11-19 20:55:07 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 1000 
+[ 2017-11-19 20:56:09 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 2000 
+[ 2017-11-19 20:57:10 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 4000 
+[ 2017-11-19 20:58:14 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 500 
+[ 2017-11-19 20:58:59 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 1000 
+[ 2017-11-19 20:59:44 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 2000 
+[ 2017-11-19 21:00:28 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 4000 
+[ 2017-11-19 21:03:19 ] INFO number of available cores: 8 
+[ 2017-11-19 21:03:21 ] INFO number of assigned cores: 8 
+[ 2017-11-19 21:03:21 ] INFO Running has been started.... 
+[ 2017-11-19 21:05:06 ] INFO Running has been finished. Reporting is starting... 
+[ 2017-11-19 21:05:06 ] INFO reporting for:train 
+[ 2017-11-19 21:05:06 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 500 
+[ 2017-11-19 21:06:11 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 1000 
+[ 2017-11-19 21:07:17 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 2000 
+[ 2017-11-19 21:08:22 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 4000 
+[ 2017-11-19 21:09:27 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 500 
+[ 2017-11-19 21:10:31 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 1000 
+[ 2017-11-19 21:11:32 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 2000 
+[ 2017-11-19 21:12:34 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 4000 
+[ 2017-11-19 21:13:37 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 500 
+[ 2017-11-19 21:14:36 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 1000 
+[ 2017-11-19 21:15:34 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 2000 
+[ 2017-11-19 21:16:33 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 4000 
+[ 2017-11-19 21:17:32 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 500 
+[ 2017-11-19 21:18:15 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 1000 
+[ 2017-11-19 21:18:55 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 2000 
+[ 2017-11-19 21:19:33 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 4000 
+[ 2017-11-20 10:57:46 ] INFO number of available cores: 8 
+[ 2017-11-20 10:57:48 ] INFO number of assigned cores: 8 
+[ 2017-11-20 10:57:48 ] INFO Running has been started.... 
+[ 2017-11-20 10:59:21 ] INFO Running has been finished. Reporting is starting... 
+[ 2017-11-20 10:59:22 ] INFO reporting for:train 
+[ 2017-11-20 10:59:22 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 500 
+[ 2017-11-20 11:00:31 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 1000 
+[ 2017-11-20 11:01:38 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 2000 
+[ 2017-11-20 11:02:47 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 4000 
+[ 2017-11-20 11:03:52 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 500 
+[ 2017-11-20 11:04:56 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 1000 
+[ 2017-11-20 11:05:59 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 2000 
+[ 2017-11-20 11:07:01 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 4000 
+[ 2017-11-20 11:08:03 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 500 
+[ 2017-11-20 11:09:01 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 1000 
+[ 2017-11-20 11:10:00 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 2000 
+[ 2017-11-20 11:10:58 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 4000 
+[ 2017-11-20 11:11:56 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 500 
+[ 2017-11-20 11:12:40 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 1000 
+[ 2017-11-20 11:13:22 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 2000 
+[ 2017-11-20 11:14:00 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 4000 
+[ 2017-11-20 11:14:38 ] INFO reporting for:test 
+[ 2017-11-20 11:14:38 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 500 
+[ 2017-11-20 11:14:46 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 1000 
+[ 2017-11-20 11:14:53 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 2000 
+[ 2017-11-20 11:15:00 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 4000 
+[ 2017-11-20 11:15:08 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 500 
+[ 2017-11-20 11:15:15 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 1000 
+[ 2017-11-20 11:15:22 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 2000 
+[ 2017-11-20 11:15:29 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 4000 
+[ 2017-11-20 11:15:36 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 500 
+[ 2017-11-20 11:15:43 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 1000 
+[ 2017-11-20 11:15:50 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 2000 
+[ 2017-11-20 11:15:57 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 4000 
+[ 2017-11-20 11:16:04 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 500 
+[ 2017-11-20 11:16:09 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 1000 
+[ 2017-11-20 11:16:13 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 2000 
+[ 2017-11-20 11:16:18 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 4000 
+[ 2017-11-20 11:16:22 ] INFO Reporting has been finished. Ploting is starting... 
+[ 2017-11-20 11:16:52 ] INFO Done. 
+[ 2017-11-20 11:24:45 ] INFO number of available cores: 8 
+[ 2017-11-20 11:24:47 ] INFO number of assigned cores: 8 
+[ 2017-11-20 11:24:47 ] INFO Running has been started.... 
+[ 2017-11-20 11:24:47 ] INFO Running has been finished. Reporting is starting... 
+[ 2017-11-20 11:24:47 ] INFO Reporting has been finished. Ploting is starting... 
+[ 2017-11-20 11:36:12 ] INFO number of available cores: 8 
+[ 2017-11-20 11:36:13 ] INFO number of assigned cores: 8 
+[ 2017-11-20 11:36:13 ] INFO Running has been started.... 
+[ 2017-11-20 11:36:13 ] INFO Running has been finished. Reporting is starting... 
+[ 2017-11-20 11:36:13 ] INFO Reporting has been finished. Ploting is starting... 
+[ 2017-11-20 11:38:19 ] INFO number of available cores: 8 
+[ 2017-11-20 11:38:21 ] INFO number of assigned cores: 8 
+[ 2017-11-20 11:38:21 ] INFO Running has been started.... 
+[ 2017-11-20 11:38:21 ] INFO Running has been finished. Reporting is starting... 
+[ 2017-11-20 11:38:21 ] INFO Reporting has been finished. Ploting is starting... 
+[ 2017-11-20 11:39:01 ] INFO number of available cores: 8 
+[ 2017-11-20 11:39:03 ] INFO number of assigned cores: 8 
+[ 2017-11-20 11:39:03 ] INFO Running has been started.... 
+[ 2017-11-20 11:39:03 ] INFO Running has been finished. Reporting is starting... 
+[ 2017-11-20 11:39:03 ] INFO Reporting has been finished. Ploting is starting... 
+[ 2017-11-20 11:39:33 ] INFO Done. 
+[ 2017-11-20 12:00:17 ] INFO number of available cores: 8 
+[ 2017-11-20 12:00:19 ] INFO number of assigned cores: 8 
+[ 2017-11-20 12:00:19 ] INFO Running has been started.... 
+[ 2017-11-20 12:00:19 ] INFO Running has been finished. Reporting is starting... 
+[ 2017-11-20 12:00:19 ] INFO Reporting has been finished. Ploting is starting... 
+[ 2017-11-20 12:00:51 ] INFO Done. 
+[ 2017-11-20 16:49:42 ] INFO number of available cores: 8 
+[ 2017-11-20 16:49:44 ] INFO number of assigned cores: 8 
+[ 2017-11-20 16:49:44 ] INFO Running has been started.... 
+[ 2017-11-20 16:51:08 ] INFO Running has been finished. Reporting is starting... 
+[ 2017-11-20 16:51:08 ] INFO reporting for:0 
+[ 2017-11-20 16:51:08 ] INFO corr_tresh: 0 & bp_dist_thresh: 0 
+[ 2017-11-20 16:52:06 ] INFO number of available cores: 8 
+[ 2017-11-20 16:52:07 ] INFO number of assigned cores: 8 
+[ 2017-11-20 16:52:07 ] INFO Running has been started.... 
+[ 2017-11-20 16:53:53 ] INFO Running has been finished. Reporting is starting... 
+[ 2017-11-20 16:53:53 ] INFO reporting for:0 
+[ 2017-11-20 16:53:53 ] INFO corr_tresh: 0 & bp_dist_thresh: 0 
+[ 2017-11-20 16:54:31 ] INFO Reporting has been finished. Ploting is starting... 
+[ 2017-11-20 16:54:49 ] INFO Done. 
+[ 2017-11-20 17:25:57 ] INFO number of available cores: 8 
+[ 2017-11-20 17:25:58 ] INFO number of assigned cores: 8 
+[ 2017-11-20 17:25:58 ] INFO Running has been started.... 
+[ 2017-11-20 17:27:35 ] INFO Running has been finished. Reporting is starting... 
+[ 2017-11-20 17:27:35 ] INFO reporting for:0 
+[ 2017-11-20 17:27:35 ] INFO corr_tresh: 0 & bp_dist_thresh: 0 
+[ 2017-11-20 17:28:18 ] INFO Reporting has been finished. Ploting is starting... 
+[ 2017-11-20 17:28:41 ] INFO Done. 
+[ 2017-11-20 17:34:14 ] INFO number of available cores: 8 
+[ 2017-11-20 17:34:15 ] INFO number of assigned cores: 8 
+[ 2017-11-20 17:34:15 ] INFO Running has been started.... 
+[ 2017-11-20 17:36:01 ] INFO Running has been finished. Reporting is starting... 
+[ 2017-11-20 17:36:01 ] INFO reporting for:train 
+[ 2017-11-20 17:36:01 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 500 
+[ 2017-11-20 17:36:36 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 1000 
+[ 2017-11-20 17:37:11 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 2000 
+[ 2017-11-20 17:37:45 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 4000 
+[ 2017-11-20 17:38:20 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 500 
+[ 2017-11-20 17:38:53 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 1000 
+[ 2017-11-20 17:39:28 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 2000 
+[ 2017-11-20 17:40:02 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 4000 
+[ 2017-11-20 17:40:36 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 500 
+[ 2017-11-20 17:41:09 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 1000 
+[ 2017-11-20 17:41:42 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 2000 
+[ 2017-11-20 17:42:15 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 4000 
+[ 2017-11-20 17:42:48 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 500 
+[ 2017-11-20 17:43:14 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 1000 
+[ 2017-11-20 17:43:39 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 2000 
+[ 2017-11-20 17:44:04 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 4000 
+[ 2017-11-20 17:44:28 ] INFO reporting for:test 
+[ 2017-11-20 17:44:28 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 500 
+[ 2017-11-20 17:44:32 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 1000 
+[ 2017-11-20 17:44:36 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 2000 
+[ 2017-11-20 17:44:40 ] INFO corr_tresh: 0.1 & bp_dist_thresh: 4000 
+[ 2017-11-20 17:44:44 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 500 
+[ 2017-11-20 17:44:48 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 1000 
+[ 2017-11-20 17:44:52 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 2000 
+[ 2017-11-20 17:44:56 ] INFO corr_tresh: 0.2 & bp_dist_thresh: 4000 
+[ 2017-11-20 17:45:00 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 500 
+[ 2017-11-20 17:45:04 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 1000 
+[ 2017-11-20 17:45:07 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 2000 
+[ 2017-11-20 17:45:11 ] INFO corr_tresh: 0.4 & bp_dist_thresh: 4000 
+[ 2017-11-20 17:45:15 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 500 
+[ 2017-11-20 17:45:18 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 1000 
+[ 2017-11-20 17:45:21 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 2000 
+[ 2017-11-20 17:45:25 ] INFO corr_tresh: 0.8 & bp_dist_thresh: 4000 
+[ 2017-11-20 17:45:28 ] INFO Reporting has been finished. Ploting is starting... 
+[ 2017-11-20 17:46:00 ] INFO Done. 
+[ 2017-11-21 13:01:03 ] INFO number of available cores: 8 
+[ 2017-11-21 13:01:05 ] INFO number of assigned cores: 8 
+[ 2017-11-21 13:01:05 ] INFO Running has been started.... 
+[ 2017-11-21 13:01:05 ] INFO Running has been finished. Reporting is starting... 
+[ 2017-11-21 13:01:05 ] INFO Reporting has been finished. Ploting is starting... 
+[ 2017-11-21 13:01:39 ] INFO Done. 
+[ 2017-11-21 13:02:30 ] INFO number of available cores: 8 
+[ 2017-11-21 13:02:31 ] INFO number of assigned cores: 8 
+[ 2017-11-21 13:02:31 ] INFO Running has been started.... 
+[ 2017-11-21 13:02:31 ] INFO Running has been finished. Reporting is starting... 
+[ 2017-11-21 13:02:31 ] INFO Reporting has been finished. Ploting is starting... 
+[ 2017-11-21 13:02:46 ] INFO Done. 
+[ 2017-11-21 13:55:05 ] INFO number of available cores: 8 
+[ 2017-11-21 13:55:07 ] INFO number of assigned cores: 8 
+[ 2017-11-21 13:55:07 ] INFO Running has been started.... 
+[ 2017-11-21 13:55:07 ] INFO Running has been finished. Reporting is starting... 
+[ 2017-11-21 13:55:07 ] INFO Reporting has been finished. Ploting is starting... 
+[ 2017-11-21 13:55:21 ] INFO Done. 
+[ 2017-11-21 13:55:29 ] INFO number of available cores: 8 
+[ 2017-11-21 13:55:30 ] INFO number of assigned cores: 8 
+[ 2017-11-21 13:55:30 ] INFO Running has been started.... 
+[ 2017-11-21 13:55:30 ] INFO Running has been finished. Reporting is starting... 
+[ 2017-11-21 13:55:30 ] INFO Reporting has been finished. Ploting is starting... 
+[ 2017-11-21 13:56:00 ] INFO Done. 

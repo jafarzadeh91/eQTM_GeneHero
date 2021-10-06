@@ -1,0 +1,179 @@
+---
+title: "Non-linear models to predict gene expression level"
+author: "Sina Jafarzadeh"
+date: "March 28, 2018"
+output: github_document
+---
+```{r}
+library(dplyr)
+library(Matrix)
+library(magrittr)
+library(tibble)
+library(neuralnet)
+library(caret)
+library(gbm)
+library(mnormt)
+library(doParallel)
+library(foreach)
+library(logging)
+library(reshape2)
+```
+We started out with linear regression models to capture the relations between the CpG sites values and the level of expression for different genes. We have applied various feature selection techniques to achieve a stable performance for the model and make it robust against overfitting. In this section, we are going to analyze the performance of more advanced models that capture the non-linear relations between the variables as well. For this purpose, we train two models based on neural networks and conditional inference trees. Neural networks are known for their capability of estimating more complex smooth functions. Decision Trees are also known for partitioning the vector space into different disjoint areas instead of one continuous estimation line.
+
+Our first step is loading data. We need to load the results of the initial eQTM analysis that shows the significant probes for each gene. We also need to load the initial dataset to get the value of methylation probes and genes of interest. We filter out adjusted pvalues bigger than 0.05 as the significance threshold. We just consider the genes with more than one significant probe resulting in a total number of 312 genes.
+
+```{r}
+cor_test_results_PCA_lapply_V4=readRDS('../cor_test_results_PCA_lapply_V4.rds')
+load('../rosmap_postprocV2.RData')
+```
+
+```{r}
+cor_test_results_PCA_lapply_V4_significants=cor_test_results_PCA_lapply_V4 %>% filter(adjusted.pvalue<0.05)
+important_genes=table(cor_test_results_PCA_lapply_V4_significants$gene) %>% as.data.frame() %>% filter(Freq>1)
+cor_test_results_PCA_lapply_V4_significants_importance_genes = cor_test_results_PCA_lapply_V4_significants[which(match(cor_test_results_PCA_lapply_V4_significants$gene,important_genes$Var1,nomatch = 0)!=0),]
+genes_ind = match(cor_test_results_PCA_lapply_V4_significants_importance_genes$gene,colnames(subjects_genes))
+probes_ind = match(cor_test_results_PCA_lapply_V4_significants_importance_genes$probe,rownames(probes_subjects));
+genes_ind_unique=unique(genes_ind)
+mse_on_test=matrix(nrow  = 2,ncol = length(genes_ind_unique),data = 0)
+mae_on_test=matrix(nrow = 2,ncol = length(genes_ind_unique), data = 0)
+  
+first_feature_importance=matrix(nrow = 6,ncol = length(genes_ind_unique), data = 0)
+```
+we use `caret` library to analyze the data by the mentioned model. we use `80%` of subjects for train and the remaining `20%` for the test. We train the model using a 3-fold cross validation repeated 10 times for different random splitting of data.
+for the neural network, we use `nnet` model with maximum iterations of `1000`. we tune the `decay` and `size` parameters of the networking using the cross-validation results. we use the logistic function as activation function of neurons to impose non-linearity for the decision tree, we use `ctree` model with `mincriterion` as tuning parameter selected by cross-validation. We then use the model to predict the gene expression values for genes in the test dataset. We also quantize the r-square contribution of the most significant probe divided by the sum of r-square for all of the significant probes. This criterion highlights the importance of using multiple probes in model training instead of single probe analysis.
+```{r}
+#foreach (i=1:length(genes_ind_unique), .packages = c("dplyr","magrittr","tibble","neuralnet","caret","gbm","mnormt"))%dopar% {
+for (i in 1:length(genes_ind_unique)){
+  print(i)
+#  loginfo(i,logger='writeToFile')
+
+  subjects_gene = subjects_genes[,genes_ind_unique[i]] %>% as.data.frame()
+  rownames(subjects_gene)=rownames(subjects_genes)
+  colnames(subjects_gene)=important_genes$Var1[i]
+  probes_subject = probes_subjects[probes_ind[which(genes_ind==genes_ind_unique[i])],] ;
+  subject_probes = probes_subject %>% t()
+  data=merge(subject_probes,subjects_gene, by = "row.names")
+
+  data=column_to_rownames(data, var = "Row.names") 
+  #folds <- kWayCrossValidation(nRows = nrow(data),3);
+  trainIndex <- createDataPartition(data[,ncol(data)], p=.8, list=F)
+  train_control<- trainControl(method="repeatedcv", number=3,repeats = 10, savePredictions = TRUE)
+  my.grid <- expand.grid(.decay = c(1, 0.5, 0.1, 0.05, 0.025, 0), .size = c(1, 3, 5))
+  fit.nnet <- train(x = data[trainIndex,-ncol(data)],y=data[trainIndex,ncol(data)], trControl = train_control,
+    method = "nnet", maxit = 1000, tuneGrid = my.grid, trace = F, linout = 0)    
+ 
+  my.grid=expand.grid(.mincriterion=c(0.99, 0.98, 0.96, 0.92, 0.84, 0.68, 0.36, 0))
+  fit.ctree <- train(x = data[trainIndex,-ncol(data)],y=data[trainIndex,ncol(data)], trControl = train_control, method='ctree',tuneGrid=my.grid)
+
+  
+  # fit.leapBackward <-train(x = data[trainIndex,-ncol(data)],y=data[trainIndex,ncol(data)], trControl = train_control, method='leapBackward',tuneGrid = expand.grid(nvmax = seq(ncol(data)-1) ))
+  # 
+  #   fit.leapForward <-train(x = data[trainIndex,-ncol(data)],y=data[trainIndex,ncol(data)], trControl = train_control, method='leapForward',tuneGrid = expand.grid(nvmax = seq(ncol(data)-1) ))
+  #   
+  #     fit.leapSeq <-train(x = data[trainIndex,-ncol(data)],y=data[trainIndex,ncol(data)], trControl = train_control, method='leapSeq',tuneGrid = expand.grid(nvmax = seq(ncol(data)-1) ))
+  #     
+  #       fit.lmStepAIC <-train(x = data[trainIndex,-ncol(data)],y=data[trainIndex,ncol(data)], trControl = train_control, method='lmStepAIC')
+        
+  
+  # gbmGrid <-  expand.grid(interaction.depth = c(1, 3, 6, 9, 10),
+  #                   n.trees = (0:5)*5, 
+  #                   shrinkage = seq(.0005, .05,.0005),
+  #                   n.minobsinnode = 10) # you can also put something        like c(5, 10, 15, 20)
+  # 
+  # fit.gbm <- train(x = data[trainIndex,-ncol(data)],y=data[trainIndex,ncol(data)], trControl = train_control, method='gbm',tuneGrid=gbmGrid , verbose=FALSE)
+  # 
+  # 
+  predict.nnet <- predict(fit.nnet, newdata =data[-trainIndex,-ncol(data)])
+  predict.ctree <- predict(fit.ctree, newdata =data[-trainIndex,-ncol(data)])
+  # predict.leapBackward<- predict(fit.leapBackward, newdata =data[-trainIndex,-ncol(data)])
+  # predict.leapForward <- predict(fit.leapForward, newdata =data[-trainIndex,-ncol(data)])
+  # predict.leapSeq<- predict(fit.leapSeq, newdata =data[-trainIndex,-ncol(data)])
+  # predict.lmStepAIC<- predict(fit.lmStepAIC, newdata =data[-trainIndex,-ncol(data)])
+  # 
+  # predict.gbm <- predict(fit.gbm, newdata =data[-trainIndex,-ncol(data)])
+  # 
+  mse_on_test[1,i]=mean((predict.nnet-data[-trainIndex,ncol(data)])^2)
+  mae_on_test[1,i]=mean(abs(predict.nnet-data[-trainIndex,ncol(data)]))
+  
+  mse_on_test[2,i]=mean((predict.ctree-data[-trainIndex,ncol(data)])^2)
+  mae_on_test[2,i]=mean(abs(predict.ctree-data[-trainIndex,ncol(data)]))
+  
+  # mse_on_test[3,i]=mean((predict.leapBackward-data[-trainIndex,ncol(data)])^2)
+  # mae_on_test[3,i]=mean(abs(predict.leapBackward-data[-trainIndex,ncol(data)]))
+  # 
+  # 
+  # mse_on_test[4,i]=mean((predict.leapForward-data[-trainIndex,ncol(data)])^2)
+  # mae_on_test[4,i]=mean(abs(predict.leapForward-data[-trainIndex,ncol(data)]))
+  # 
+  # 
+  # mse_on_test[5,i]=mean((predict.leapSeq-data[-trainIndex,ncol(data)])^2)
+  # mae_on_test[5,i]=mean(abs(predict.leapSeq-data[-trainIndex,ncol(data)]))
+  # 
+  # 
+  # mse_on_test[6,i]=mean((predict.lmStepAIC-data[-trainIndex,ncol(data)])^2)
+  # mae_on_test[6,i]=mean(abs(predict.lmStepAIC-data[-trainIndex,ncol(data)]))
+  # 
+  # 
+  
+  # mse_on_test[3,i]=mean((predict.gbm-data[-trainIndex,ncol(data)])^2)
+  # mae_on_test[3,i]=mean(abs(predict.gbm-data[-trainIndex,ncol(data)]))
+  # 
+  importance.nnet=varImp(fit.nnet, scale = FALSE)$importance
+  importance.ctree=varImp(fit.ctree, scale = FALSE)$importance
+  #   importance.leapBackward=varImp(fit.leapBackward, scale = FALSE)$importance
+  # importance.leapForward=varImp(fit.leapForward, scale = FALSE)$importance
+  #   importance.leapSeq=varImp(fit.leapSeq, scale = FALSE)$importance
+  # importance.lmStepAIC=varImp(fit.lmStepAIC, scale = FALSE)$importance
+  # 
+  # importance.gbm=varImp(fit.gbm, scale = FALSE)$importance
+  # 
+  first_feature_importance[1,i]=max(importance.nnet$Overall)/sum(importance.nnet$Overall)
+  first_feature_importance[2,i]=max(importance.ctree$Overall)/sum(importance.ctree$Overall)
+  # first_feature_importance[3,i]=max(importance.leapBackward$Overall)/sum(importance.leapBackward$Overall)
+  # first_feature_importance[4,i]=max(importance.leapForward$Overall)/sum(importance.leapForward$Overall)
+  # first_feature_importance[5,i]=max(importance.leapSeq$Overall)/sum(importance.leapSeq$Overall)
+  # first_feature_importance[6,i]=max(importance.lmStepAIC$Overall)/sum(importance.lmStepAIC$Overall)
+  # 
+  # first_feature_importance[3,i]=max(importance.gbm$Overall)/sum(importance.gbm$Overall)
+  # 
+}
+```
+below, we pick up a random gene to investigate the performance of different models. We also provide comparative analysis afterwards.In the first figure, you see the Mean Absolute Error(MAE) for neural network model in different settings of parameters. Size shows the number of neurons that have been used in the model. Decay parameter protects the model against overfitting. In this example, we see that model with the higher number of neurons show the least value of error. It means that we need a higher number of neurons to capture the complex relationship between the inputs and output. Moreover, we see that the model has the least error for decay parameter equal to zero. It shows that the model has zero tendencies for overfitting. Given a large number of samples and a small number of variables, it shows that the complexity of model can accurately explain the variance of the data without being overfitted to the data.The right diagram shows the error of the model for conditional inference tree across different `mincreation` variable. `mincreation` similarly control the complexity of tree to prevent overfitting. In our case, it seems that we can utilize more complicated trees because of the large volume data and the small number of variables.
+
+```{r}
+fit.nnet$results %>% group_by(size) %>% ggplot() + geom_line(aes(x=decay, y=MAE,group=size, colour=size),size=1) + theme_minimal()
+fit.ctree$results %>% ggplot() + geom_line(aes(x=mincriterion, y=MAE),color="blue",size=1) + theme_minimal()
+```
+In this part, we show the importance of using multiple probes instead of single probe. We plot the contribution percentage of each significant probe to the gene of interest in different models. It shows that the most significant probe contributes around 25% to the overall r-squared explained by models. It verifies the importance of using all significant probes to explain the variance in gene expression values.
+```{r}
+importance.nnet=importance.nnet/sum(importance.nnet)
+importance.ctree=importance.ctree/sum(importance.ctree)
+
+merged_data=merge(importance.nnet,importance.ctree,by="row.names")
+colnames(merged_data)=c("probes_name","nnet","ctree")
+merged_data_melted=melt(merged_data)
+merged_data_melted$probes_name=as.factor(merged_data_melted$probes_name)
+merged_data_melted %>% ggplot() + geom_bar(aes(x=probes_name,y=value,fill=variable), position = "dodge", stat="identity")
+```
+In previous parts, we analyzed different models based on their performance of cross-validation. In this part, we investigate models performance on independent test data consisting 20% of the whole initial data. Below, we plotted the histogram of MSE error for different genes in our trainset. While both models have a similar performance, the `nnet` results in more genes with a small value of error in comparison to `ctree` mode.
+```{r}
+mse_nnet = (predict.nnet-data[-trainIndex,ncol(data)])^2
+mse_ctree = (predict.ctree-data[-trainIndex,ncol(data)])^2
+mse_merged = cbind(mse_nnet,mse_ctree)
+colnames(mse_merged) = c("nnet","ctree")
+mse_merged_melt = melt(mse_merged)
+colnames(mse_merged_melt) = c("Subjects","Model", "MSE")
+ggplot(mse_merged_melt, aes(MSE, fill = Model)) + geom_histogram(alpha = 0.5, aes(y = ..density..), position = 'identity')
+```
+The average test error for this two models are:
+```{r}
+average_test_error_neural_network = mean(mse_nnet)
+average_test_error_neural_network
+
+average_test_error_ctree = mean(mse_ctree)
+average_test_error_ctree
+#linear_results=readRDS('MSP.rda')
+#linear_results_extracted=linear_results[,c("single_test","full_test","forward_test","backward_test","lasso_test","higher_msp")]
+#linear_results_binded=rbind(mse_on_test,t(linear_results_extracted))
+```
+We observed that despite our initial expectation, the non-linear models (NN and CIT) didn’t provide better estimations in comparison to linear regression. We suspect that using more complicated models, e.g. increasing the number of hidden layers in NN may capture the potential non-linearity between the CpG-gene relationship. A line of research that we will address in future.

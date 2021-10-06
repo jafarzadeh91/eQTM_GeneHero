@@ -1,0 +1,249 @@
+---
+title: "Step4- Biological Plausibility-Gene Set Enrichment Analysis"
+author: "Zohreh Sharafian"
+date: "March 27, 2018"
+output: github_document
+---
+
+Next, we study the relationship between numbers of significant methylated CpG sites corresponding to the genes and the function of those genes. In other words, we check if those genes that correspond to the multiple probes are multifunctional ane are more involved in biological process.
+
+We load related library packages to understand and verify the biological aspects of our analysis.We use "ermineR" package for gene set enrichment analysis(Gillis et al., 2010).
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(reshape2)
+library(devtools)
+library(ermineR)
+ermineR:::findJava()
+```
+### Loading data
+
+WE load  dataset from eQTM analysis that we have peroformed in Step 2 including all the adjusted P values for analyzing single probes.
+
+```{r}
+ original_data <- readRDS("C:/Users/zohre/Desktop/Repo_team_Gene_Heroes/Data/cor_test_results_PCA_lapply_V4.rds")
+
+head(original_data)
+
+```
+
+### Modifiying data
+
+We remove the second part of gene names as "ermineR" accepts the HGNC symbol of the genes.
+
+```{r}
+
+modified_data <- original_data
+
+modified_data$new_gene_name <- sub(':.*$',"",modified_data$gene)
+
+modified_data <- modified_data[c("gene","new_gene_name", "probe","estimate", "pvalue", "adjusted.pvalue")]
+
+head(modified_data)
+```
+### Preparing the inputs
+
+We extract three columns including "new gane name", "probe", and "adjusted P-value" for all the genes in our dataset. Next, we count the number of probes corresponding to a particular gene and assign zero to the probees that are not significant and have P-value<0.05.
+
+```{r}
+
+extracted_data <- modified_data[,c(2, 3,6)]
+
+filtered_adjusted_pvalue <- extracted_data[extracted_data$adjusted.pvalue<0.05,]
+#filtered_adjusted_pvalue= extracted_data
+all_genes_names=unique(modified_data$new_gene_name);
+remaining_names=setdiff(all_genes_names,filtered_adjusted_pvalue$new_gene_name)
+remaining_names=as.data.frame(remaining_names);
+remaining_names$count=0;
+
+filtered_adjusted_pvalue [1:20,]
+
+```
+We realize that there are 536 genes that have one or more significant probes.
+```{r}
+
+nrow(filtered_adjusted_pvalue)
+
+length(unique(filtered_adjusted_pvalue$new_gene_name))
+
+
+```
+
+We generate a new dataset including the gene names and the counts of corresponding probes corresponding to each gene.Those genes that do not have any related probes get zero value.
+```{r}
+library(tidyverse)
+
+gene_list <- filtered_adjusted_pvalue %>% count(new_gene_name)
+gene_list[1:15,]
+colnames(remaining_names)=c("new_gene_name","n")
+gene_list=rbind(gene_list,remaining_names)
+#gene_list$n=exp(gene_list$n)
+class(gene_list)
+
+```
+We provide what ermineJ requires as inputs including:
+ 
+  1.The gene ontology (GO) XML file
+  2.The annotation file
+  The annotation file and GO XML files together provide the gene sets.
+  3.The list of genes and corresponding scores to be analyzed.
+
+```{r}
+
+if (!file.exists("GO.xml")) { goToday("GO.xml") }
+
+ermineInputGeneScores <- gene_list %>% 
+  mutate(absolute_n = abs(n)) %>% 
+  na.omit() %>% 
+  as.data.frame() %>% 
+  arrange(desc(absolute_n)) %>% 
+  column_to_rownames("new_gene_name")
+
+```
+
+We use the Precision-Recall method to perform the enrichment analysis.
+
+```{r}
+enrichmentResult <- precRecall(scores = ermineInputGeneScores, 
+                               scoreColumn = 1, 
+                               bigIsBetter = TRUE, 
+                               annotation = "Generic_human", 
+                               aspects = "B", 
+                               iterations = 10000, 
+                               geneSetDescription = "GO.xml") 
+```
+
+The result show the "correctedMFPvalue"=1 for all the genes regardless of the number of corresponding probes.This result shows that there is not any relationship between the number of significant probes corresponding to the genes and the multifunctionality of the genes as there is no significant correctedMFPvalue for the gene sets.
+```{r}
+
+enrichmentResult$results %>% arrange(CorrectedPvalue) 
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

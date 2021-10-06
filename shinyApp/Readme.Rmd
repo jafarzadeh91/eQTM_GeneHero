@@ -1,0 +1,9 @@
+## app.R
+
+- The ShinyApp was made to supplement analysis and visualization of data for selected genes. It shows,
+
+      --gene expression distribution,
+
+      --eQTM output and 
+
+      --gene-probe pair correlation plots. 

@@ -1,0 +1,18 @@
+---
+title: "Readme"
+author: "Lisa Leung"
+date: '2018-04-02'
+output: html_document
+---
+
+## Poster_draft.ppt
+
+- This file is the powerpoint file for our poster presentation
+
+## Progressreport.Rmd and Progressreport.md
+
+- These files are the deliverables for the progress report submitted.
+
+## Group_Project_Proposal_Gene_Heroes.md and Group Project Proposal_Gene Heroes.Rmd
+
+- These files are the deliverables for the project proposal that was submitted.
